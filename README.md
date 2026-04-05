@@ -18,8 +18,9 @@ Explore as pastas para encontrar diferentes desafios. Cada projeto possui um **R
   - Como executar localmente.
 
 ## 📂 Projetos implementados
-<!--### **🧮 Iniciante**  
-- 
+### **🧮 Iniciante**  
+- [Bin2Dec](./Beginner%20Projects/Bin2Dec/) - Binary-to-Decimal number converter
+<!--
 ### **📟 Intermediário** 
 -
 ### **💻 Avançado**
