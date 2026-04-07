@@ -1,14 +1,19 @@
 const inputField = document.getElementById('binary');
 let binaryValue = "";
 
-inputField.addEventListener('input', () => {
-    const index = parseInt(inputField.value.length - 1);
-    const current = inputField.value[index];
+if (inputField) {
+    inputField.addEventListener('input', (event) => {
+        const current = event.data;
 
-    if (isNaN(current) && index < 0) inputField.value = binaryValue = "";
-    else if (isNaN(current) || current == " ") notifyUser();
-    else if (current > 1) notifyUser();
-    else binaryValue = inputField.value;
-})
+        if (current == null || current == '0' || current == '1')
+            binaryValue = inputField.value;
+        else {
+            notifyUser();
+            inputField.value = binaryValue;
+        }
+    })
 
-const notifyUser = () => { alert(`Digite somente 0's ou 1's`); inputField.value = binaryValue }
+}
+
+const notifyUser = () => alert(`Digite somente 0's ou 1's`);
+
