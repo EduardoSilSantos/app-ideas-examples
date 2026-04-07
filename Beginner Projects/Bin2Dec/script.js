@@ -5,7 +5,8 @@ inputField.addEventListener('input', () => {
     const index = parseInt(inputField.value.length - 1);
     const current = inputField.value[index];
 
-    if (isNaN(current) || current == " ") notifyUser();
+    if (isNaN(current) && index < 0) inputField.value = binaryValue = "";
+    else if (isNaN(current) || current == " ") notifyUser();
     else if (current > 1) notifyUser();
     else binaryValue = inputField.value;
 })
