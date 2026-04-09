@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-const { notifyUser, init } = require("./script");
+const { notifyUser, init, toDecimal } = require("./script");
 const fs = require("fs");
 const path = require("path");
 
@@ -14,21 +14,10 @@ describe("User Stories Validation", () => {
         const html = fs.readFileSync(path.resolve(__dirname, "index.html"), "utf8");
         document.body.innerHTML = html;
         input = document.getElementById('binary');
+        output = document.getElementById('decimal');
         form = document.getElementById('formConverter');
         global.alert = jest.fn();
         init();
-    });
-    describe('Development tests', () => {
-        it("should call a message of developing feature", () => {
-            form.dispatchEvent(new SubmitEvent("submit"));
-            expect(global.alert).toHaveBeenCalledWith("Funcionalidade em desenvolvimento!");
-        });
-        it("should not to submit form", () => {
-            const event = new SubmitEvent("submit");
-            const preventSpy = jest.spyOn(event, "preventDefault");
-            form.dispatchEvent(event);
-            expect(preventSpy).toHaveBeenCalled();
-        })
     });
     describe('User can enter up to 8 binary digits in one input field', () => {
 
@@ -83,5 +72,41 @@ describe("User Stories Validation", () => {
             expect(global.alert).toHaveBeenCalled();
             expect(input.value).toBe('0');
         });
+    })
+    describe('User views the results in a single output field', () => {
+        it("should determine the decimal equivalent of a particular binary digit ", () => {
+            input.value = '11111111';
+            const result = toDecimal(input.value);
+            expect(result).toBe(255);
+        });
+        it("should show a single output field containing the decimal result", () => {
+            input.value = '11111111';
+            input.dispatchEvent(new InputEvent('input', { data: '1' }));
+            form.dispatchEvent(new SubmitEvent("submit"));
+            expect(output.value).toBe("255");
+        });
+        it("should not to submit the form", () => {
+            const event = new SubmitEvent("submit");
+            const preventSpy = jest.spyOn(event, "preventDefault");
+            form.dispatchEvent(event);
+            expect(preventSpy).toHaveBeenCalled();
+        })
+    });
+    describe('Bonus features - User can enter a variable number of binary digits', () => {
+        it('should convert 11111111 to 255', () => {
+            input.value = '11111111';
+            const result = toDecimal(input.value);
+            expect(result).toBe(255);
+        })
+        it('should convert 11111 to 31', () => {
+            input.value = '11111';
+            const result = toDecimal(input.value);
+            expect(result).toBe(31);
+        })
+        it('should convert 111 to 7', () => {
+            input.value = '111';
+            const result = toDecimal(input.value);
+            expect(result).toBe(7);
+        })
     })
 });
