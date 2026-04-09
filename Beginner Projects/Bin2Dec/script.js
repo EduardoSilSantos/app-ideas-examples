@@ -14,6 +14,15 @@ const init = () => {
             inputField.value = binaryValue;
         }
     });
+    converter();
+};
+const converter = () => {
+    const form = document.getElementById('formConverter');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        alert('Funcionalidade em desenvolvimento!');
+    })
+
 };
 // 👉 Se estiver no navegador, chama init automaticamente
 if (typeof window !== 'undefined') window.addEventListener('DOMContentLoaded', init);
