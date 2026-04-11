@@ -19,7 +19,7 @@ Explore as pastas para encontrar diferentes desafios. Cada projeto possui um **R
 
 ## 📂 Projetos implementados
 ### **🧮 Iniciante**  
-- [Bin2Dec](./Beginner%20Projects/Bin2Dec/) - Binary-to-Decimal number converter
+- [Bin2Dec](https://github.com/EduardoSilSantos/bin2dec) - Binary-to-Decimal number converter
 <!--
 ### **📟 Intermediário** 
 -
