@@ -1,29 +1,32 @@
-# 🚀 Desafios de Programação – App Ideas
+[![English](https://img.shields.io/badge/lang-English-blue?labelColor=red)](https://github.com/EduardoSilSantos/app-ideas-examples)
+[![Português](https://img.shields.io/badge/lang-Português-green?labelColor=yellow)](README.pt.md)
 
-## 📌 Sobre
-Este repositório é dedicado à implementação de desafios e ideias de projetos propostos no repositório [app-ideas](https://github.com/florinpop17/app-ideas).
+# 🚀 Programming Challenges – App Ideas
 
-## 🎯 Objetivos
-O objetivo principal é praticar desenvolvimento solucionando diferentes desafios de codificação:
-  - Implementar projetos de diferentes níveis de dificuldade (iniciante, intermediário e avançado).
-  - Exercitar boas práticas de programação e organização de código.
-  - Documentar cada implementação para facilitar aprendizado e reutilização.
-  - Criar uma coleção de soluções que demonstrem habilidades e evolução contínua.
-  - Construir um portfólio de aplicações variadas.
+## 📌 About
+This repository is dedicated to implementing challenges and project ideas proposed in the [app-ideas](https://github.com/florinpop17/app-ideas) repository.
 
-## 🗺️ Como navegar
-Explore as pastas para encontrar diferentes desafios. Cada projeto possui um **README** próprio com detalhes sobre:
-  - Objetivo do desafio.
-  - Tecnologias utilizadas.
-  - Como executar localmente.
+## 🎯 Goals
+The main goal is to practice development by solving different coding challenges:
+  - Implementing projects across different difficulty levels (beginner, intermediate, and advanced)
+  - Exercising good programming practices and code organization.
+  - Documenting each implementation to support learning and reuse.
+  - Building a collection of solutions that showcase skills and ongoing progress.
+  - Creating a portfolio of diverse applications.
 
-## 📂 Projetos implementados
-### **🧮 Iniciante**  
+## 🗺️ How to navigate
+Explore the folders to find different challenges. Each project has its own **README** with details about:
+  - The challenge objective.
+  - Technologies used.
+  - How to run locally.
+
+## 📂 Implemented Projects
+### **🧮 Beginner**  
 - [Bin2Dec](https://github.com/EduardoSilSantos/bin2dec) - Binary-to-Decimal number converter
 <!--
-### **📟 Intermediário** 
+### **📟 Intermediate** 
 -
-### **💻 Avançado**
+### **💻 Advanced**
 - -->
-## 📖 Referência
-Todos os desafios foram inspirados nas ideias do repositório [app-ideas](https://github.com/florinpop17/app-ideas), criado por [Florin Pop](https://github.com/florinpop17) e colaboradores.
+## 📖 Reference
+All challenges were inspired by ideas from the [app-ideas](https://github.com/florinpop17/app-ideas) repository, created by [Florin Pop](https://github.com/florinpop17) and contributors.
